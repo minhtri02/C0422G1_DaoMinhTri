@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form lấy surver khách hàng</title>
+    <style>
+        table{
+            border: solid;
+        }
+        td,th{
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satissfation survey.</p>
+    <hr>
+    <form style="padding: 0px">
+        <ul type="none">
+            <li>
+                <label><b>what is your age range?/</b></label>
+                <br>
+                <select style="width: 200px">
+                <option>18-24</option>
+                <option>25-34</option>
+                <option>35-50</option>
+                <option>50+</option>
+                </select>
+            </li>
+            <li>
+                <label>what is your yearly income range?</label>
+                <br>
+                <select style="width: 200px">
+                    <option>$0 - $25,000</option>
+                    <option>$25,001 - $50,000</option>
+                    <option>$50,001 - $100,000</option>
+                    <option>$100,000 +</option>
+                </select>
+            </li>
+            <li>
+                <label><b>Gender ldentity</b></label>
+                <br>
+                <input id="rdmale" type="radio" name="rd"><label for="rdmale"> Male</label> <br>
+                <input id="rdfemale" type="radio" name="rd"><label for="rdfemale"> Female</label> <br>
+                <input id="rdnonbinary" type="radio" name="rd"><label for="rdnonbinary"> Nonbinary</label> <br>
+                <input id="rd" type="radio" name="rd"> <label for="rd">Other</label><br>
+                <input  id="maximun" type="text" value maxlength="250"><br>
+                <label for="maximun" style="display: block;">Maximum of 250 charaters,  Currently Used: 0 characters.</label>
+            </li>
+            <li>
+                <label><b>Which of the follwing products have your purchased in the last 2 months. Please check all that apply.</b></label>
+                <br>
+                <input type="checkbox"> Product 1<br>
+                <input type="checkbox"> Product 2<br>
+                <input type="checkbox"> Product 3<br>
+            </li>
+            <li>
+                <label><b>How often would you use our new product?</b></label>
+                <br>
+                <input type="radio" name="r"> Daily<br>
+                <input type="radio" name="r"> Weekly<br>
+                <input type="radio" name="r"> Monthly<br>
+            </li>
+            <li>
+                <label><b>What would you pay for thhe new product?</b></label>
+                <br>
+                $ <span>
+                    <input id="dollar" type="text" size="10">
+                    <label for="dollar">Dollars</label>
+                </span>
+                <span> . </span>
+                <span>
+                    <input id="cent" type="text" size="2">
+                    <label for="cent">cents</label>
+                </span>
+            </li>
+            <li>
+                <label><b>What features would you like to see in the new product.</b></label><br>
+                <textarea rows="20" cols="40"></textarea>
+            </li>
+            <li>
+                <label><b> Please rate your level of agreement with the following statements.</b></label>
+                <table style="text-align: center">
+                    <tr>
+                        <th></th>
+                        <th>Strongly Disagree</th>
+                        <th>Disagree</th>
+                        <th>Agree</th>
+                        <th>Strongly Agree</th>
+                    </tr>
+                    <tr>
+                        <td>Our products aree priced fairly.</td>
+
+                        <td><input type="radio" name="1"><br>1</td>
+                        <td><input type="radio" name="1"><br>2</td>
+                        <td><input type="radio" name="1"><br>3</td>
+                        <td><input type="radio" name="1"><br>4</td>
+                    </tr>
+                    <tr>
+                        <td>Our produuctts are high quality.</td>
+                        <td><input type="radio" name="2"><br>1</td>
+                        <td><input type="radio" name="2"><br>2</td>
+                        <td><input type="radio" name="2"><br>3</td>
+                        <td><input type="radio" name="2"><br>4</td>
+                    </tr>
+                    <tr>
+                        <td>you would recommend our product toa friend or coworkeer.</td>
+                        <td><input type="radio" name="3"><br>1</td>
+                        <td><input type="radio" name="3"><br>2</td>
+                        <td><input type="radio" name="3"><br>3</td>
+                        <td><input type="radio" name="3"><br>4</td>
+                    </tr>
+                </table>
+                <input type="submit" value="submit">
+            </li>
+        </ul>
+
+    </form>
+</body>
+</html>
