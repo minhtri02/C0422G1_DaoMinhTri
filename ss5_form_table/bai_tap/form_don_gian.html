@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đơn giản</title>
+    <style>
+        form{
+
+            width: auto;
+            border: solid  ;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        p{
+            margin: 0px;
+        }
+        tr{
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <table width="100%">
+        <tr >
+            <th colspan="2" bgcolor="red">
+                <h2 style="text-align: center">Sở thích của bạn</h2>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                    <p>Họ và tên: </p>
+            </td>
+            <td>
+                    <input type="text"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Email: </p>
+            </td>
+            <td>
+                <input type="email"><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p >Sở thích: </p>
+            </td>
+            <td>
+                <input type="checkbox" value="Thể thao" name="rd">Thể thao
+                <input type="checkbox" name="rd">Âm nhạc
+                <input type="checkbox" name="rd">Đọc sách
+                <input type="checkbox" name="rd">Lướt wed
+                <input type="checkbox" name="rd">Chơi game
+                <input type="checkbox" name="rd">Điện ảnh
+                <input type="checkbox" name="rd">Du lịch
+            </td>
+        </tr>
+            <td>
+
+            </td>
+            <td>
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
+            </td>
+    </table>
+</form>
+</body>
+</html>

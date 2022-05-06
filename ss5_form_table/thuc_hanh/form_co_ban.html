@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form cơ bản</title>
+    <style>
+        .mau{
+            font-family: ".VnLucida sans","sans-serif";
+        }
+    </style>
+</head>
+
+<body>
+    <form action="form_co_ban.html" method="get" class="mau">
+        <h2>Order Form</h2>
+        <b>would you like to buy?</b><br>
+        <select>
+            <option value=" ">A</option>
+            <option>B (+ 0.5$)</option>
+            <option>C (+ 0.7$)</option>
+        </select>
+        <br>
+        <b>how many would you like to order</b><br>
+        <input type="radio" name="rd"   >1 - $10<br>
+        <input type="radio" name="rd">2 - $20<br>
+        <input type="radio" name="rd">3 - $30<br>
+        <b>name<span style="color: #ff0000">*</span></b><br>
+        <input name="firstname" type="text" size="15" value="First name">
+        <input name="lastname" type="text" size="15" value="last name"><br>
+        <b>Email</b><br>
+        <input type="text"><br>
+        <b>Phone Number </b><br>
+        <input size="5" type="text"> - <input size="5" type="text"> - <input size="5" type="text"><br><br>
+        <input type="button" value="submit" name="submit">
+    </form>
+</body>
+</html>
