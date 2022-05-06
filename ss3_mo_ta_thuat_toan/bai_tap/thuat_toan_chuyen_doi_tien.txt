@@ -1,0 +1,7 @@
+-Thuật toán chuyển đổi dolar -> VND
+
+BEGIN
+	INPUT dolar
+	VND = dolar * 23000
+	DISPLAY VND
+END

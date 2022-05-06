@@ -1,0 +1,22 @@
+
+- Thuật toán phân loại học sinh theo điểm số
+
+BEGIN
+	INPUT a
+	if a>=75
+		DISPLAY 'loai A'
+	if 75 > a >= 60
+		DISPLAY 'loai B'
+	if 60 > a >= 45 
+		DISPLAY 'loai C'
+	if 45 > a >= 35
+		DISPLAY 'loai D'
+	if a < 35
+		DISPLAY 'loai E'
+END
+
+				
+
+
+
+

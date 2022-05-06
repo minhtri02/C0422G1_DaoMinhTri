@@ -1,0 +1,7 @@
+-Thuật toán tính điểm trung bình
+
+BEGIN
+	INPUT math, physics, chemistry
+	SUM = (math + physics + chemistry)/3
+	DISPLAY SUM
+END

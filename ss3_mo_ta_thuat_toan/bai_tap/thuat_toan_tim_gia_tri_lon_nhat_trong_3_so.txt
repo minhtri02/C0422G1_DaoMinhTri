@@ -1,0 +1,27 @@
+-Thuật toán tìm giá trị lớn nhất trong 3 số
+
+BEGIN
+	INPUT	a, b, c
+	if a > b 
+		max = a
+	else 
+		max = b
+	if c > max 
+		max = c
+	DISPLAY max
+END
+-------
+BEGIN
+	INPUT a, b, c
+	if a > b
+		if a > c
+			DISPLAY 'a la so lon nhat'
+		else
+			DISPLAY ' c la so lon nhat'
+	else if b > c
+			DISPLAY ' b la so lon nhat'
+		else 
+			DISPLAY ' c la so lon nhat'
+END
+
+

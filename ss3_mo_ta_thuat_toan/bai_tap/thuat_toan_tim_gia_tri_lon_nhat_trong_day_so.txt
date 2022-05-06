@@ -1,0 +1,13 @@
+- Thuật toán tìm giá trị lớn nhất có trong dãy số
+
+BEGIN
+	INPUT a1,a2,a3...an
+	MAX = 0
+	i=1
+	DO 
+		IF a[i] > MAX
+			MAX= a[i]
+		i = i + 1
+	WHILE i <= n
+	DISPLAY MAX
+END
