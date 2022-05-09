@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<input type="text" id="soa">
+<input type="text" id="sob">
+<button type="button" onclick="cong()">Cộng</button>
+<button type="button" onclick="tru()">Trừ</button>
+<button type="button" onclick="nhan()">Nhân</button>
+<button type="button" onclick="chia()">Chia</button><br><br>
+<b>Result</b><br>
+<p id="kq"></p>
+<script>
+    function cong() {
+        var a = document.getElementById("soa").value;
+        var b = document.getElementById("sob").value;
+        document.getElementById("kq").innerText = parseInt(a)+parseInt(b);
+    }
+    function tru() {
+        var a = document.getElementById("soa").value;
+        var b = document.getElementById("sob").value;
+        document.getElementById("kq").innerText = parseInt(a)-parseInt(b);
+    }
+    function nhan() {
+        var a = document.getElementById("soa").value;
+        var b = document.getElementById("sob").value;
+        document.getElementById("kq").innerText = parseInt(a)*parseInt(b);
+    }
+    function chia() {
+        var a = document.getElementById("soa").value;
+        var b = document.getElementById("sob").value;
+        document.getElementById("kq").innerText = parseInt(a)/parseInt(b);
+    }
+</script>
+</body>
+</html>

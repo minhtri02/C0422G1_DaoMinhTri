@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="so"></td>
+            <td>
+                <select id="from">
+                    <option>VNĐ</option>
+                    <option>USA</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option>VNĐ</option>
+                    <option>USA</option>
+                </select>
+            </td>
+        </tr>
+
+    </table>
+Result: <p id="kq"></p><br>
+    <button type="button" onclick="doitiente()">Convert</button>
+<script>
+    function doitiente() {
+        let a = document.getElementById("so").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from == 'VNĐ' && to == 'VNĐ'){
+            document.getElementById("kq").innerText= a + "Đ";
+        }else if (from == 'VNĐ' && to == 'USA'){
+            document.getElementById("kq").innerText = parseInt(a)/23000 + "$";
+        }else if (from == 'USA' && to =='USA'){
+            document.getElementById("kq").innerText = a + "$";
+        }else
+            document.getElementById("kq").innerText = parseInt(a)*23000 + "Đ";
+    }
+</script>
+</body>
+</html>

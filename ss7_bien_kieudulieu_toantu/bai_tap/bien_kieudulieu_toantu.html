@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<b>bài 1: tính tổng và điểm trung bình của 3 môn</b>
+<table style="text-align: left">
+    <tr>
+        <th>điểm vật lý: </th>
+        <td><input type="text" id="vat_ly" ></td>
+    </tr>
+    <tr>
+        <th>điểm hoá học: </th>
+        <td><input type="text" id="hoa_hoc" ></td>
+    </tr>
+    <tr>
+        <th>điểm sinh học: </th>
+        <td><input type="text" id="sinh_hoc" ></td>
+    </tr>
+    <tr>
+        <th>tổng : </th>
+        <td><p id="sum">0</p></td>
+    </tr>
+    <tr>
+        <th>điểm tb: </th>
+        <td><p id="diemtb">0</p></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><button type="button" onclick="tong_tb()">kết quả</button></td>
+    </tr>
+</table>
+ <br>
+
+<br>
+
+
+<br>
+
+
+<b>Bài 2: Đổi 0C sang 0F</b>
+
+<table>
+    <tr>
+        <th>
+            Nhập 0C:
+        </th>
+        <td><input type="text" id="c" ></td>
+    </tr>
+    <tr>
+        <th>kết quả chuyển từ 0C -> 0F</th>
+        <td><p id="kqF"></p></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><button type="button" onclick="doic()"> Kết quả</button>
+        </td>
+    </tr>
+    <tr>
+        <th>Nhập 0F: </th>
+        <td><input type="text" id="f"></td>
+    </tr>
+    <tr>
+        <th>Kết quả chuyển từ 0F -> 0C</th>
+        <td><p id="kqC"></p></td>
+    </tr>
+    <tr>
+        <th></th>
+        <td><button type="button" onclick="doif()"> Kết quả</button><br>
+        </td>
+    </tr>
+</table>
+
+
+
+<b>Bài 3: Tính Chu vi hình tròn</b><br>
+Nhập bán kính: <input type="text" id="bankinh"><br>
+<p id="kqchuvi"></p>
+<button type="button" onclick="chuvi()">kết quả</button>
+<script>
+    function tong_tb() {
+        let a = document.getElementById("vat_ly").value;
+        let b = document.getElementById("hoa_hoc").value;
+        let c = document.getElementById("sinh_hoc").value;
+        let tong = parseInt(a)+parseInt(b)+parseInt(c);
+        let tb = tong /3;
+        document.getElementById('sum').innerText= tong;
+        document.getElementById('diemtb').innerText= tb;
+    }
+    function doic(){
+        let c = document.getElementById("c").value;
+        let tong =( 9 * parseInt(c) +160 )/5;
+        document.getElementById("kqF").innerHTML= tong;
+
+    }
+    function doif() {
+        let f = document.getElementById('f').value;
+        let tong   = (parseInt(f)-32)*5/9;
+        document.getElementById("kqC").innerText=tong;
+    }
+    function chuvi() {
+        let a = document.getElementById("bankinh").value;
+        let chuvi = parseInt(a)*2*3.14;
+        document.getElementById("kqchuvi").innerText=chuvi;
+    }
+</script>
+</body>
+</html>
