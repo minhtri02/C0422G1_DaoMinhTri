@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+
+            <b>Bài 1: Chuyển từ độ C sang độ F.</b><br>
+            Nhập vào độ C: <input type="text" id="c"><br>
+            <p id="kqF"></p><br>
+            <input type="button" value="Chuyển đổi" onclick="doic()"><br>
+            <hr>
+
+</body>
+<script>
+    function doic(){
+        let c = document.getElementById("c").value;
+        let tong =( 9 * parseInt(c) +160 )/5;
+        document.getElementById("kqF").innerHTML='Độ F = '+ tong;
+
+    }
+
+</script>
+</html>

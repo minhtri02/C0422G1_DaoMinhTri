@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Ứng dụng máy tính</title>
+    <style>
+        button{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
 </head>
 <body>
 <input type="text" id="soa">
 <input type="text" id="sob">
-<button type="button" onclick="cong()">Cộng</button>
-<button type="button" onclick="tru()">Trừ</button>
-<button type="button" onclick="nhan()">Nhân</button>
-<button type="button" onclick="chia()">Chia</button><br><br>
+<button type="button" onclick="cong1()">Cộng</button>
+<button type="button" onclick="tru1()">Trừ</button>
+<button type="button" onclick="nhan1()">Nhân</button>
+<button type="button" onclick="chia1()">Chia</button><br><br>
 <b>Result</b><br>
 <p id="kq"></p>
+<br>
+<br>
+<hr>
+<b>Yêu cầu mở rộng!!</b><br>
+
+
 <script>
-    function cong() {
+    function cong1() {
         var a = document.getElementById("soa").value;
         var b = document.getElementById("sob").value;
         document.getElementById("kq").innerText = parseInt(a)+parseInt(b);
     }
-    function tru() {
+    function tru1() {
         var a = document.getElementById("soa").value;
         var b = document.getElementById("sob").value;
         document.getElementById("kq").innerText = parseInt(a)-parseInt(b);
     }
-    function nhan() {
+    function nhan1() {
         var a = document.getElementById("soa").value;
         var b = document.getElementById("sob").value;
         document.getElementById("kq").innerText = parseInt(a)*parseInt(b);
     }
-    function chia() {
+    function chia1() {
         var a = document.getElementById("soa").value;
         var b = document.getElementById("sob").value;
         document.getElementById("kq").innerText = parseInt(a)/parseInt(b);
     }
+
+
 </script>
 </body>
 </html>

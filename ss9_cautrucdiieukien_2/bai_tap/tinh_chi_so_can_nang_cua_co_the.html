@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+    <script>
+        let height = (prompt('Enter your height : '))
+        let weight = (prompt('Enter your weight : '))
+        let bmi = (weight) / (height*height);
+        bmi <18.5 ? alert('Underweight!'):
+            bmi < 25 ? alert('Normal!'):
+                bmi <30 ? alert('Over Weight!'): alert('Obese!')
+    </script>
+</body>
+</html>

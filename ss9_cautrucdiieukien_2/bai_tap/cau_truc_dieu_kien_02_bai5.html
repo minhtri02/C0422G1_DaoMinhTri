@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+    <b>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</b><br>
+    Nhập cạnh kề bên phải trong tam giác vuông: <input type="text" id="canhphai"><br>
+    Nhập cạnh kề bên trái trong tam giác vuông: <input type="text" id="canhtrai"><br>
+    <p id="viewtamgiacvuong"></p><br>
+    <input type="button" value="check" onclick="tamgiacvuong()"><br>
+    <hr>
+</body>
+<script>
+    function tamgiacvuong() {
+        let canhphai = document.getElementById('canhphai').value;
+        let canhtrai = document.getElementById('canhtrai').value;
+        document.getElementById('viewtamgiacvuong').innerText='diện tích tam giác vuông = '+ (parseFloat(canhphai)*parseFloat(canhtrai))/2;
+    }
+</script>
+</html>

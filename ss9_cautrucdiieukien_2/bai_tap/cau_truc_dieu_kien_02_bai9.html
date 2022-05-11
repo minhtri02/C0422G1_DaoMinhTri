@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+    <b>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</b><br>
+    Nhập vào cạnh a: <input type="text" id="canha"><br>
+    Nhập vào cạnh b: <input type="text" id="canhb"><br>
+    Nhập vào cạnh c: <input type="text" id="canhc"><br>
+<p id="view"></p><br>
+<input type="button" onclick="check()" value="check"><br>
+<hr>
+</body>
+<script>
+    function check() {
+        let a =parseInt(document.getElementById('canha').value);
+        let b =parseInt(document.getElementById('canhb').value);
+        let c =parseInt(document.getElementById('canhc').value);
+        a>0&&b>0&&c>0&&a+b>c&&a+c>b&&b+c>a? document.getElementById('view').innerText='3 cạnh trên là của 1 tam giác':
+            document.getElementById('view').innerText='3 cạnh trên không cùng thuộc 1 tam giác!';
+    }
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+    <b>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</b><br>
+    Nhập vào 1 số nguyên: <input type="text" id="age"><br>
+    <p id="view"></p><br>
+    <input type="button" onclick="check()" value="check"><br>
+    <hr>
+</body>
+<script>
+    function check() {
+        let age = parseInt(document.getElementById('age').value);
+        0<age && age<=120 ? document.getElementById('view').innerText='Đây là tuổi của 1 người nào đó!':document.getElementById('view').innerText='Đây ko phải tuổi của 1 người!';
+    }
+</script>
+</html>

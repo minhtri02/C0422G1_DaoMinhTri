@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+
+</head>
+<body>
+<b>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</b><br>
+Nhập số tiền thu nhập cá nhân hằng tháng: <input type="text" id="tienluong"><br>
+<p id="view"></p><br>
+<input type="button" onclick="check()" value="check"><br>
+<hr>
+<script>
+    function check() {
+        let tienluong = parseInt(document.getElementById('tienluong').value);
+        tienluong<=10000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong - (tienluong*5/100)):
+            tienluong<=18000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*10/100)):
+                tienluong<=32000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*20/100)):
+                    tienluong<=52000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*25/100)):
+                        document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*30/100));
+    }
+</script>
+</body>
+</html>

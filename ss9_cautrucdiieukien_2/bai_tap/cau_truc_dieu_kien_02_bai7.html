@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+    <b>Bài 7: Giải phương trình bậc 2 dó dạng a * x2 + b * x + c = 0.</b><br>
+    Nhập giá trị a: <input type="text" id="giatria"><br>
+    Nhập giá trị b: <input type="text" id="giatrib"><br>
+    Nhập giá trị c: <input type="text" id="giatric"><br>
+    <p id="view"></p>
+    <br>
+    <input type="button" onclick="giaiptbac2()" value="check"><br>
+<hr>
+</body>
+<script>
+    function giaiptbac2() {
+        let a = parseFloat(document.getElementById('giatria').value);
+        let b = parseFloat(document.getElementById('giatrib').value);
+        let c = parseFloat(document.getElementById('giatric').value);
+        let delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.getElementById('view').innerText=" Phương trình vô nghiệm ";
+        } else if (delta == 0) {
+            let x = -b / 2 * a;
+            document.getElementById('view').innerText ='phương trình có 1 nghiêm: '+ x;
+        } else if (delta > 0) {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.getElementById('view').innerText ='phương trình có 2 nghiệm'+ x1 +' , '+ x2;
+        }
+    }
+</script>
+</html>

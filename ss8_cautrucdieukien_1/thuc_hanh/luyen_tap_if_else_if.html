@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc if..else..if</title>
+</head>
+<body>
+    <script>
+        let Storage = prompt("Nhập tên đăng nhập:");
+        console.log(typeof Storage);
+        if (Storage == "Admin"){
+            let pass = prompt("Nhập password:");
+            if (pass == "TheMaster") {
+                alert("Welcome");
+                }else if (pass == "") {
+                    alert("Canceled");
+                } else {
+                    alert("Wrong password!");
+                }
+        }else if (Storage == "") {
+            alert("canceld")
+        } else {
+            alert("I don't know you!")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<b>Bài 10: Viết chương trình tính giá điện.</b><br>
+Nhập số điện gia đình sử dụng: <input type="text" id="sodien"><br>
+<p id="view"></p><br>
+<input type="button" onclick="check()" value="check"><br>
+<hr>
+</body>
+<script>
+    function check() {
+        let sodien = parseInt(document.getElementById('sodien').value);
+        sodien <= 50 ? document.getElementById('view').innerText = sodien * 1000 :
+            sodien <= 100 ? document.getElementById('view').innerText = 50000 + (100 - sodien) * 1200 :
+                sodien <= 200 ? document.getElementById('view').innerText = 50000 + 50 * 1200 + (200 - sodien) * 1500 :
+                    sodien <= 300 ? document.getElementById('view').innerText = 50000 + 60000 + 300000 + (300 - sodien) * 2000 :
+                        document.getElementById('view').innerText = 'nhập số điện chưa đúng!';
+    }
+</script>
+</html>

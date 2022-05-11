@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Kiểm tra năm nhuận</title>
 </head>
 <body>
-$END$
+<span>Nhập số năm bạn cần kiểm tra: </span>
+    <input type="text" id="year" ><br>
+    <p id="view"></p><br>
+<button type="button" onclick="leadyear()">Test year</button>
+<script>
+
+    function leadyear() {
+        let text = document.getElementById("year").value;
+        parseInt(text);
+        if (text % 4 == 0){
+            if (text % 100 == 0){
+                if (text %400 ==0){
+                    document.getElementById("view").innerText= text +" là năm nhuận!";
+                }else {
+                    document.getElementById("view").innerText= text +" không phải là năm nhuận!";
+                }
+            }else {
+                document.getElementById("view").innerText= text +" là năm nhuận!";
+            }
+        }else {
+            document.getElementById("view").innerText= text +" không phải là năm nhuận!";
+        }
+    }
+</script>
 </body>
 </html>

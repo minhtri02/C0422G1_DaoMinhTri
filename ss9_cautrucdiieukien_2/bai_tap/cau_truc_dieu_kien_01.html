@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 01</title>
+</head>
+<body>
+    <ol>
+        <li>
+            <b>Bài 1: Nhập vào 2 số a và b, và kiểm tra xem a có chia hết cho b hay không?</b><br>
+            Nhập số a: <input type="text" id="soa"><br>
+            Nhập số b: <input type="text" id="sob"><br>
+            <p id="view"></p><br>
+            <button type="button" onclick="check()">check</button><br>
+            <hr>
+        </li>
+        <li>
+            <b>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</b><br>
+            Nhập số tuổi của bạn: <input type="text" id="aye"><br>
+            <p id="viewAye"></p><br>
+            <button type="button" onclick="checkAye()">Check</button><br>
+            <HR>
+        </li>
+        <li>
+            <b>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</b><br>
+            Nhập số nguyên bất kỳ: <input type="text" id="integer"><br>
+            <p id="viewNumber"></p><br>
+            <button type="button" onclick="checkNumber()">check</button><br>
+            <hr>
+
+        </li>
+        <li>
+            <b>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</b><br>
+            Nhập số nguyên thứ 1: <input type="text" id="bigOne"><br>
+            Nhập số nguyên thứ 2: <input type="text" id="bigTwo"><br>
+            Nhập số nguyên thứ 3: <input type="text" id="bigThree"><br>
+            <p id="viewBigger"></p>
+            <input type="button" onclick="bigNumber()" value="check">
+            <hr >
+        </li>
+        <li>
+            <b>Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</b><br>
+            Nhập điểm bài kiểm tra đầu kì: <input type="text" id="poinDau"><br>
+            Nhập điểm bài kiểm tra giữa kì: <input type="text" id="poinGiua"><br>
+            Nhập điểm kiểm tra cuối kì: <input type="text" id="poinCuoi"><br>
+            <p id="viewRank"></p><br>
+            <input type="button" value="check" onclick="ranker()"><br><hr>
+        </li>
+        <li>
+            <b>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</b><br>
+            Nhập doanh số bán hàng trong tháng: <input type="text" id="sales"><br>
+            <p id="viewSale"></p>
+            <input type="button" onclick="testSale()" value="check"><br>
+            <hr >
+        </li>
+        <li>
+            <b>Bài 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</b><br>
+            Nhập vào số phút gọi: <input type="text" id="phone"><br>
+            <p id="viewPhone"></p><br>
+            <input type="button" onclick="checkPhone()" value="check"><br>
+            <hr >
+
+        </li>
+    </ol>
+</body>
+<script>
+    function check() {
+        let a = document.getElementById('soa').value;
+        let b = document.getElementById('sob').value;
+        a%b==0 ? document.getElementById('view').innerText = 'a chia hết cho b!' : document.getElementById('view').innerText='a không chia hết cho b'
+    }
+    function checkAye() {
+        let aye = document.getElementById('aye').value;
+        aye >= 15 ? document.getElementById('viewAye').innerText='Bạn đủ tuổi để vào lớp 10!': document.getElementById('viewAye').innerText='Bạn chưa đủ tuổi vào lớp 10!'
+    }
+    function checkNumber() {
+        let integer = document.getElementById('integer').value;
+        integer > 0 ? document.getElementById('viewNumber').innerText=integer+ ' là số dương!':
+            integer ==0? document.getElementById('viewNumber').innerText= 'số 0 vừa là số âm vừa là số dương!':
+                document.getElementById('viewNumber').innerText= integer+ ' là số âm!'
+    }
+    function bigNumber() {
+        let bigone = parseInt(document.getElementById('bigOne').value);
+        let bigtwo = parseInt(document.getElementById('bigTwo').value);
+        let bigthree=parseInt(document.getElementById('bigThree').value);
+        if (bigone >= bigtwo){
+            if (bigone >= bigthree){
+                document.getElementById('viewBigger').innerText=bigone+ ' là số lớn nhất!';
+            }else{
+                document.getElementById('viewBigger').innerText = bigthree+ ' là số lớn nhất!';
+            }
+        }else if (bigtwo >= bigthree){
+            document.getElementById('viewBigger').innerText=bigtwo+ ' là số lớn nhất!';
+            }else {document.getElementById('viewBigger').innerText=bigthree+ ' là số lớn nhất!';
+        }
+    }
+    function ranker() {
+        let pointDau = parseFloat(document.getElementById('poinDau').value) ;
+        let poinGiua =parseFloat(document.getElementById('poinGiua').value) ;
+        let poinCuoi = parseFloat(document.getElementById('poinCuoi').value) ;
+        let tbrank = (pointDau + poinGiua*2 + poinCuoi*3)/6;
+        tbrank>=8 ? document.getElementById('viewRank').innerText='Xếp loại giỏi!':
+            tbrank>=6.5 ? document.getElementById('viewRank').innerText='Xếp loại khá!':
+                tbrank>=3.5 ? document.getElementById('viewRank').innerText='Xếp loại trung bình!': document.getElementById('viewRank').innerText='Xếp loại yếu!'
+
+        // if (tbrank >= 8){
+        //     document.getElementById('viewRank').innerText='Xếp loại giỏi!';
+        // }else if(tbrank >= 6.5){
+        //     document.getElementById('viewRank').innerText='Xếp loại khá!';
+        // }else if(tbrank>=3.5){
+        //     document.getElementById('viewRank').innerText='Xếp loại trung bình!';
+        //
+        // }else {
+        //     document.getElementById('viewRank').innerText='Xếp loại yếu!';
+        // }
+    }
+    function testSale() {
+        let sales = parseInt(document.getElementById('sales').value) ;
+        sales >=10000000 ? document.getElementById('viewSale').innerText='Hoa hồng nhận được là 10% ='+sales*10/100:
+            sales >=5000000? document.getElementById('viewSale').innerText='Hoa hồng nhận được là 5% = '+sales*5/100:
+                document.getElementById('viewSale').innerText='Hoa hồng nhận được là 3% ='+sales*3/100;
+
+    }
+    function checkPhone() {
+        let phone =parseInt(document.getElementById('phone').value) ;
+        phone<=50 ? document.getElementById('viewPhone').innerText='số tiền phải trả là: '+phone*600+25000:
+            phone<=150 ? document.getElementById('viewPhone').innerText= 'số tiền phải trả là: '+(50*600 + (phone-50)*400)+25000:
+                phone<=200 ? document.getElementById('viewPhone').innerText='Số tiền phải trả là: '+(50*600+ 100*400 + 200*(phone-150))+25000:
+                    document.getElementById('viewPhone').innerText='số tiền phải trả là: '+phone+25000;
+    }
+</script>
+</html>

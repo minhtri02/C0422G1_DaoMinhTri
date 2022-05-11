@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+    <b>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</b><br>
+    Nhâp chiều dài hình chữ nhật: <input type="text" id="heght"><br>
+    Nhập chiều rộng hình chữ nhật: <input type="text" id="weight"><br>
+    <p id="acreage"></p><br>
+    <input type="button" onclick="checkAcreage()" value="check"><br>
+    <hr>
+</body>
+<script>
+    function checkAcreage() {
+        let dai = document.getElementById('heght').value;
+        let rong = document.getElementById('weight').value;
+
+        document.getElementById('acreage').innerText='Diện tích hình chữ nhật = '+parseFloat(dai)*parseFloat(rong);
+    }
+</script>
+</html>

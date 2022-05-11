@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện cấu trúc điều kiện</title>
+</head>
+<body>
+    <b>Bài 2: Chuyển từ mét sang feet:</b><br>
+    Nhập vào giá trị met: <input type="text" id="met"><br>
+    <p id="viewMet"></p><br>
+    <input type="button" onclick="checkFt()" value="check"><br>
+    <hr>
+</body>
+<script>
+    function checkFt() {
+        let met = document.getElementById('met').value;
+        document.getElementById('viewMet').innerText='giá trị của ft = '+ parseFloat(met)*3.2808;
+    }
+</script>
+</html>
