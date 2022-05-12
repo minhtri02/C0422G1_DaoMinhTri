@@ -14,12 +14,14 @@ Nhập số tiền thu nhập cá nhân hằng tháng: <input type="text" id="ti
 <script>
     function check() {
         let tienluong = parseInt(document.getElementById('tienluong').value);
-        tienluong<=10000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong - (tienluong*5/100)):
-            tienluong<=18000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*10/100)):
-                tienluong<=32000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*20/100)):
-                    tienluong<=52000000?document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*25/100)):
-                        document.getElementById('view').innerText='số tiền nhận được là: '+eval(tienluong-(tienluong*30/100));
-    }
+        tienluong<=5000000?document.getElementById('view').innerText='số tiền trừ 5% lương nhận được là: '+eval(tienluong-(tienluong*5/100)):
+            tienluong<=10000000?document.getElementById('view').innerText='số tiền trừ 10% lương nhận được là: '+eval(tienluong-(tienluong*10/100-250000)):
+                tienluong<=18000000?document.getElementById('view').innerText='số tiền trừ 15% lương nhận được là: '+eval(tienluong-(tienluong*15/100-750000)):
+                    tienluong<=32000000?document.getElementById('view').innerText='số tiền trừ 20% lương nhận được là: '+eval(tienluong-(tienluong*20/100-1650000)):
+                        tienluong<=52000000?document.getElementById('view').innerText='số tiền trừ 25% lương nhận được là: '+eval(tienluong-(tienluong*25/100-3250000)):
+                            tienluong<=80000000?document.getElementById('view').innerText='số tiền trừ 30% lương nhận được là: '+eval(tienluong-(tienluong*30/100-5850000)):
+                                document.getElementById('view').innerText='số tiền trừ 35% lương nhận được là: '+eval(tienluong-(tienluong*35/100-9850000));
+        }
 </script>
 </body>
 </html>

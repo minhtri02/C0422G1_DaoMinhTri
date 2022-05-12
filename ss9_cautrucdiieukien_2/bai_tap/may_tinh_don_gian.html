@@ -11,54 +11,54 @@
     </style>
 </head>
 <body>
-<input id="view" value=""><br>
-<table>
+<input id="view" value="" name="view" size="22"><br>
+<table border="1">
     <tr>
-        <td><button onclick="nhap(this.value)" value="(">(</button></td>
-        <td><button onclick="nhap(this.value)" value=")">)</button></td>
-        <td><button onclick="nhap(this.value)" value="/100">%</button></td>
-        <td><button onclick="nhap(this.value)" value="+">+</button></td>
+        <td><button onclick="view.value += '('" value="(">(</button></td>
+        <td><button onclick="view.value += ')'" value=")">)</button></td>
+        <td><button onclick="view.value += '/100'" value="/100">%</button></td>
+        <td><button onclick="view.value += '+'" value="+">+</button></td>
     </tr>
     <tr>
-        <td><button onclick="nhap(this.value)" value="7">7</button></td>
-        <td><button onclick="nhap(this.value)" value="8">8</button></td>
-        <td><button onclick="nhap(this.value)" value="9">9</button></td>
-        <td><button onclick="nhap(this.value)" value="/">/</button></td>
+        <td><button onclick="view.value += '7'" value="7">7</button></td>
+        <td><button onclick="view.value += '8'" value="8">8</button></td>
+        <td><button onclick="view.value += '9'" value="9">9</button></td>
+        <td><button onclick="view.value += '/'" value="/">/</button></td>
     </tr>
     <tr>
-        <td><button onclick="nhap(this.value)" value="4">4</button></td>
-        <td><button onclick="nhap(this.value)" value="5">5</button></td>
-        <td><button onclick="nhap(this.value)" value="6">6</button></td>
-        <td><button onclick="nhap(this.value)" value="*">x</button></td>
+        <td><button onclick="view.value += '4'" value="4">4</button></td>
+        <td><button onclick="view.value += '5'" value="5">5</button></td>
+        <td><button onclick="view.value += '6'" value="6">6</button></td>
+        <td><button onclick="view.value += '*'" value="*">x</button></td>
     </tr>
     <tr>
-        <td><button onclick="nhap(this.value)" value="1">1</button></td>
-        <td><button onclick="nhap(this.value)" value="2">2</button></td>
-        <td><button onclick="nhap(this.value)" value="3">3</button></td>
-        <td><button onclick="nhap(this.value) " value="-">-</button></td>
+        <td><button onclick="view.value += '1'" value="1">1</button></td>
+        <td><button onclick="view.value += '2'" value="2">2</button></td>
+        <td><button onclick="view.value += '3'" value="3">3</button></td>
+        <td><button onclick="view.value += '-' " value="-">-</button></td>
 
     </tr>
     <tr>
-        <td><button onclick="nhap(this.value)" value="0">0</button></td>
-        <td><button onclick="nhap(this.value)" value=".">.</button></td>
-        <td><button onclick="kq(this.value)">=</button></td>
-        <td><button type="reset" onclick="xoa()">AC</button></td>
+        <td><button onclick="view.value += '0'" value="0">0</button></td>
+        <td><button onclick="view.value += '.'" value=".">.</button></td>
+        <td><button onclick="view.value = eval(view.value)">=</button></td>
+        <td><button type="reset" onclick="view.value = ''">AC</button></td>
 
     </tr>
 </table>
-<script>
-    let index = document.getElementById("view").value;
-    function nhap(value) {
-        view.value += value;
+<!--<script>-->
+<!--    let index = document.getElementById("view").value;-->
+<!--    function nhap(value) {-->
+<!--        view.value += value;-->
 
-    }
-    function kq() {
-        let result = eval(view.value);
-        view.value = result;
-    }
-    function xoa() {
-        view.value = "";
-    }
-</script>
+<!--    }-->
+<!--    function kq() {-->
+<!--        let result = eval(view.value);-->
+<!--        view.value = result;-->
+<!--    }-->
+<!--    function xoa() {-->
+<!--        view.value = "";-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>

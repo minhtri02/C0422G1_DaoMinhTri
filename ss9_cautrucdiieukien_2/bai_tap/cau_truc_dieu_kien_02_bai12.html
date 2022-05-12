@@ -8,12 +8,12 @@
 <b>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</b><br><br>
 <table style="text-align: left">
     <tr>
-        <th>Nhập số tiền gởi trong ngân hàng: </th>
-        <td><input type="text" id="tiengoi"><br></td>
+        <th>Nhập số tiền vay ngân hàng: </th>
+        <td><input type="text" id="tienvay"><br></td>
     </tr>
     <tr>
         <th>
-            Nhập số tháng gởi trong ngân hàng:
+            Nhập số tháng vay ngân hàng:
         </th>
         <td><input type="text" id="sothang"><br></td>
     </tr>
@@ -38,11 +38,25 @@
 <hr>
 <script>
     function check() {
-        let tiengoi = parseFloat(document.getElementById('tiengoi').value);
-        let sothang = parseFloat(document.getElementById('sothang').value);
-        let laixuat = parseFloat(document.getElementById('laixuat').value);
-        let lai1thang = tiengoi*laixuat/100;
-        document.getElementById('view').innerText='số tiền cả lãi trong ngân hàng là: '+eval(tiengoi+lai1thang*sothang);
+        let tienVay = parseFloat(document.getElementById('tienvay').value);
+        let soThang = parseFloat(document.getElementById('sothang').value);
+        let laiXuat = parseFloat(document.getElementById('laixuat').value);
+        let goctrahangthang = tienVay/soThang;
+        let laitrahangthang;
+        var gocconlai = tienVay;
+        let goclaihangthang ;
+        let tong =0 ;
+        let tonglai=0;
+        for (var i=1;i<=soThang;i++){
+            laitrahangthang = (gocconlai *laiXuat/100)/12;
+            gocconlai = gocconlai -goctrahangthang;
+            goclaihangthang = laitrahangthang+goctrahangthang;
+            tong = tong + goclaihangthang;
+            tonglai = laitrahangthang + tonglai;
+            console.log(laitrahangthang);
+            document.getElementById('view').innerHTML='tổng gốc lãi cần trả là: ' + (tonglai+tienVay) ;
+
+        }
     }
 </script>
 </body>
