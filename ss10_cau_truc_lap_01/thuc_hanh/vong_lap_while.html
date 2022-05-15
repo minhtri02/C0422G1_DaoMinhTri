@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng vòng lặp while</title>
+</head>
+<body>
+    <script>
+        let number = prompt('nhập vào 1 số để bắt đầu!');
+        let total=0;
+        while (number != -1){
+            number=parseInt(prompt('nhập vào 1 số: '));
+
+            if (number == -1)
+                break;
+            alert(number);
+            total +=number;
+
+        }
+        document.write(total);
+
+        //bai 2
+
+        let view = "<p>bài 2</p><br>";
+        let i=1;
+        while (i<100){
+            view += "<hr width= " + i + "% ><br>"
+            i++;
+        }
+        document.write(view);
+    </script>
+</body>
+</html>

@@ -20,7 +20,12 @@
         let b = parseFloat(document.getElementById('giatrib').value);
         let c = parseFloat(document.getElementById('giatric').value);
         let delta = b * b - 4 * a * c;
-        if (delta < 0) {
+        if (a==0){
+            (b == 0 && c == 0)?document.getElementById('view').innerText='Phương trình vô số nghiệm':
+                (b != 0 && c == 0)?document.getElementById('view').innerText= 'Phương trình có nghiệm x = 0':
+                    (b == 0 && c != 0)?document.getElementById('view').innerText="Phương trình vô nghiệm":
+                        document.getElementById('view').innerText= 'Phương trình có nghiệm x = ' + (-c/b);
+        }else if (delta < 0) {
             document.getElementById('view').innerText=" Phương trình vô nghiệm ";
         } else if (delta == 0) {
             let x = -b / 2 * a;

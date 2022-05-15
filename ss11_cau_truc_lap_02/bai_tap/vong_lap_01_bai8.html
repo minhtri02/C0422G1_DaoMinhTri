@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button type="button" onclick="check()">button</button>
+</body>
+<script>
+    function check() {
+        let number = parseInt(prompt('Số bạn muôn đoán lớn nhất trong khoảng bao nhiêu: '));
+        let randomnumber = Math.floor(Math.random() * number);
+        console.log(randomnumber);
+        let count = 0;
+        while (randomnumber != number){
+            if (count == 3){
+                alert('Bạn đã hết lượt đoán!');
+                break;
+            }
+            let number_check = prompt('nhập số bạn đoán !');
+            if (number_check == randomnumber){
+                alert('Xin chúc mừng, bạn đã đoán đúng!')
+                break;
+            }
+            if (randomnumber > number_check){
+                alert('Số của bạn nhỏ hơn!');
+            }else {
+                alert('Số của bạn lớn hơn!');
+            }
+            count+=1;
+        }
+    }
+</script>
+</html>

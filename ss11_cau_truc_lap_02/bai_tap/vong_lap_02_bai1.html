@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhập vào thứ tự dãy số fibonacci: ')
+    let a1= 1;
+    let a2=2;
+    let i=3;
+    let sum = 3;
+    document.write(1+'<br>'+2+'<br>')
+    while (i <= n)
+    {
+        let a = a1 + a2;
+        a1 = a2;
+        a2 = a;
+        i++;
+        document.write(a + '<br>');
+    }
+</script>
+</body>
+</html>

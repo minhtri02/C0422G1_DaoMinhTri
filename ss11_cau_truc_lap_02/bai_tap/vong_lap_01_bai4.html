@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 02</title>
+</head>
+<body>
+    <script>
+        let n = prompt('nhập vào thứ tự dãy số fibonacci: ')
+        let a1= 1;
+        let a2=2;
+        let i=3;
+
+        while (i < n)
+        {
+            let a = a1 + a2;
+            a1 = a2;
+            a2 = a;
+            i++;
+            if (a%5==0){
+                document.write('giá trị đầu tiên trong dãy fibonacci chia hết cho 5 là: '+ a)
+                break;
+            }
+
+        }
+    </script>
+</body>
+</html>

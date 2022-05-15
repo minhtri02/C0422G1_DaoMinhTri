@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+    <style>
+        table td {
+            border: solid cornflowerblue;
+            background-color: azure;
+        }
+        tr,td{
+            width: 10px;
+            height: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+
+
+<body style="text-align: center" >
+    <h1 style="color: darkblue">SINH BẢNG CỬU CHƯƠNG</h1>
+    <center>
+<div id="ddd"></div>
+    </center>
+</body>
+
+<script>
+    let toto,i,j;
+    toto="<table   cellspacing='0' cellpadding='5'>";
+    for (i=1;i<10;i++){
+        toto += "<tr>";
+        for (j=1;j<10;j++){
+            toto += "<td>"+ j +"x"+i +"="+ i*j +"</td>" ;
+        }
+        toto +="</tr>"
+    }
+    toto += "</table>";
+    document.getElementById('ddd').innerHTML=toto;
+
+
+
+
+</script>
+</html>
