@@ -6,13 +6,14 @@
 </head>
 <body>
     <script>
-        let a = prompt('Nhập nhiệt độ trong phòng của bạn: ')
-
+        let a = parseInt( prompt('Nhập nhiệt độ trong phòng của bạn: '));
+        while (a>100 || a<20){
         while (a>100){
             a=prompt('bạn hãy giảm nhiệt độ!')
         }
         while (a<20){
-            a=prompt('bạn hay tăng nhiệt độ!')
+            a=prompt('bạn hãy tăng nhiệt độ!')
+        }
         }
         document.write('nhiệt độ '+ a+' rất tốt!')
     </script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ tam giác cân đặc có chiều dài h</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhập vào chiều dài tam giác tam giác')
+    for (let r = 1 ;r<=n;r++){
+        for (let sp=n-r;sp>=1;sp--){
+            document.write('&nbsp&nbsp');
+        }
+        for (let c = 1;c<=r;c++){
+            document.write('*')
+        }
+        for (c = r-1;c>=1;c--){
+            document.write('*')
+        }
+        document.write('<br>')
+    }
+</script>
+</body>
+</html>

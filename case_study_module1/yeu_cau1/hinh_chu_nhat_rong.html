@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ hình chữ nhật rỗng</title>
+</head>
+<body>
+    <script>
+        let heght=parseInt( prompt('Nhập chiều dai hình chữ nhật: '));
+        let weight =parseInt( prompt('Nhập chiều rộng hình chữ nhật: '));
+        for ( let i=1;i<=weight;i++){
+            for (let j = 1; j<=heght;j++){
+                if (i!=1&& i!=weight&&j!=1&&j!=heght){
+                    document.write('&nbsp&nbsp')
+                }else {
+                    document.write('*');
+
+                    if (j==heght) {
+                        document.write("<br>")
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

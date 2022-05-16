@@ -24,20 +24,19 @@
 
     }
     document.write('<br>')
-    for (let c = n ;c>0;c--){
-        for (let v = 1 ; v<=c-1;v++){
-            document.write('&nbsp&nbsp')
+    let m =5;
+    for (let r = 1 ;r<=n;r++){
+        for (let sp=n-r;sp>=1;sp--){
+            document.write('&nbsp&nbsp');
         }
-        for (let m=1; m<=n+1-v;m++){
-            document.write(' *')
-            if (m == n+1-v){
-                document.write('<br>')
-            }
+        for (let c = 1;c<=r;c++){
+            document.write('*')
         }
+        document.write('<br>')
     }
-    document.write('<br>--------')
-    for (var x =5; x>0;x--){
-        for (var z=1; z<=5-x;z++){
+
+    for (var x =n; x>0;x--){
+        for (var z=1; z<=n-x;z++){
             document.write('&nbsp&nbsp')
         }
         for (var y=1;y<=x;y++) {
