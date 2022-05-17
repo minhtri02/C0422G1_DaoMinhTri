@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nối 2 mảng thành 1 mảng</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    for (let i=0;i<10;i++) {
+        arr[i] = parseInt(prompt('nhập phẩn tử thứ ' + (i + 1) + ' vào mảng 1'))
+    }
+    let arr2=[]
+    for (let i=0;i<10;i++) {
+        arr2[i] = parseInt(prompt('nhập phẩn tử thứ ' + (i + 1) + ' vào mảng 2'))
+    }
+    let arr3=new Array(20);
+    for (let i=0;i<arr.length;i++){
+        arr3[i]=arr[i];
+    }
+    for (let i=10;i<arr3.length;i++){
+        arr3[i]=arr2[i-10];
+    }
+    document.write('mảng c là: ['+arr3+']')
+</script>
+</body>
+</html>

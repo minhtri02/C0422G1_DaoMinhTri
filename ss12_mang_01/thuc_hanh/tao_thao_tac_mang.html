@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<h2>sample Screen:</h2>
+<input type="text" id="view">
+
+<button onclick="add()">ADD</button>
+<button onclick="dispaly()">Display</button>
+<hr>
+<p id="option"></p>
+<script>
+    var x=0
+    let a=[]
+    function add() {
+       // a[x] = document.getElementById('view').value;
+       //  console.log(a)
+       //  x++;
+        a.push(document.getElementById('view').value)
+        document.getElementById('view').value=''
+        
+    }
+    function dispaly() {
+        let element=''
+        for (let i =0; i<a.length;i++){
+
+            element += 'Element :'+i+' = ['+a[i]+']<br>';
+        }
+        document.getElementById('option').innerHTML=element;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị lớn nhất và trung bình cộng</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let count = 0;
+    let a=0
+    for (let i=0;i<10;i++){
+        arr[i] =parseInt( prompt('nhập phẩn tử thứ '+(i+1)+' vào mảng'))
+        count+=arr[i]
+        if (arr[i]>a){
+            a=arr[i];
+
+        }
+    }
+    document.write(arr+'<br>')
+    document.write('số lớn nhất trong mảng là: '+a+'<br>')
+    document.write('giá trị trung bình là :'+(count/10))
+</script>
+</body>
+</html>

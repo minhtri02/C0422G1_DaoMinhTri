@@ -14,7 +14,7 @@ Nhập số tiền thu nhập cá nhân hằng tháng: <input type="text" id="ti
     function check() {
         let tienluong = parseInt(document.getElementById('tienluong').value);
         tienluong<=7000000?document.getElementById('view').innerText='số tiền trừ 5% lương nhận được là: '+eval(tienluong-(tienluong*5/100)):
-            tienluong<=15000000?document.getElementById('view').innerText='số tiền trừ 10% lương nhận được là: '+eval(tienluong-(tienluong*10/100-3500000)):
+            tienluong<=15000000?document.getElementById('view').innerText='số tiền trừ 10% lương nhận được là: '+eval(tienluong-(tienluong*10/100- 350000)):
                 document.getElementById('view').innerText='số tiền trừ 20% lương nhận được là: '+eval(tienluong-(tienluong*20/100-1150000));
     }
 </script>

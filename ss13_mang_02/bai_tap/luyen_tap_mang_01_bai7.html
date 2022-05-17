@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm và xoá khỏi mảng</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    for (let i=0;i<10;i++) {
+        arr[i] = parseInt(prompt('nhập phẩn tử thứ ' + (i + 1) + ' vào mảng'))
+    }
+    let number = prompt('Enter your number: ')
+    let count = 0;
+    for (let i =0;i<arr.length;i++){
+        if (number==arr[i]){
+            count++;
+            alert(number+' is in the array')
+            for (i;i<arr.length;i++){
+                arr[i]=arr[i+1];
+            }
+            arr[arr.length-1]='';
+            // arr.splice(i,1);
+            alert(arr)
+        }
+    }
+    if (count == 0){
+        alert(number+' is not in the array')
+    }
+</script>
+</body>
+</html>

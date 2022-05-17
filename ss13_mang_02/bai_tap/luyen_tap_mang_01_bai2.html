@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị phần tử lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let count = 0;
+    let a=0
+    for (let i=0;i<10;i++){
+        arr[i] =parseInt( prompt('nhập phẩn tử thứ '+(i+1)+' vào mảng'))
+        if (arr[i]>a){
+            a=arr[i];
+            count=i+1
+        }
+    }
+    document.write(arr+'<br>')
+    document.write('số lớn nhất trong mảng là: '+a+' tại vị trí '+count)
+
+</script>
+</body>
+</html>

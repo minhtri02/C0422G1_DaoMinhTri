@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>vẽ hình trái tim</title>
+    <style>
+        body {
+            color: darkorchid;
+        }
+    </style>
 </head>
 <body>
 <h1><3</h1>
 <script>
+    let m = parseInt(prompt('Nhập chiều dài trái tim từ 4-9 là đẹp: '))
     for ( let i=1;i<=2;i++){
-        for (let j = 1; j<=11;j++){
-            if ((i==1&&j==1)||(i==1&&j==6)||(i==1&&j==11)){
+        for (let j = 1; j<=2*m-1;j++){
+            if ((i==1&&j==1)||(i==1&&j==m)||(i==1&&j==2*m-1)){
                 document.write('&nbsp&nbsp')
             }else {
                 document.write('*');
@@ -18,15 +24,15 @@
         }
         document.write('<br>')
     }
-    let n=6;
-    for (let r=1;r<=6;r++){
+    let n=m;
+    for (let r=1;r<=m;r++){
         for (let sp =2;sp<=r;sp++){
             document.write('&nbsp&nbsp')
         }
         for (let c=1;c<=n;c++){
             document.write('*')
         }
-        for (let c =6-r ; c>=1;c--){
+        for (let c =m-r ; c>=1;c--){
             document.write('*');
         }
         n--;

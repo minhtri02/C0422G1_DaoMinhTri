@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xắp xếp theo thứ tự giảm dần</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    for (let i=0;i<10;i++) {
+        arr[i] = parseInt(prompt('nhập phẩn tử thứ ' + (i + 1) + ' vào mảng'))
+    }
+    let a
+    for (let i =0;i<arr.length;i++){
+        for (let j =i+1;j<arr.length;j++){
+            if (arr[i]<arr[j]){
+                a=arr[j];
+                arr[j]=arr[i];
+                arr[i]=a;
+            }
+        }
+    }
+    document.write(arr)
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let count = 0;
+    let a=[]
+    for (let i=0;i<10;i++){
+        arr[i] = prompt('nhập phẩn tử thứ '+(i+1)+' vào mảng')
+        if (arr[i]>=10){
+            a[count]=arr[i]
+            count++;
+        }
+    }
+    document.write('Có tất cả '+count + ' số lớn hơn hoặc bằng 10 trong mảng<br>');
+    document.write('Mảnh còn lại là : '+a);
+</script>
+</body>
+</html>

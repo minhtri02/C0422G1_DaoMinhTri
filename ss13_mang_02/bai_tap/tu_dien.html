@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<center>
+<form>
+    <h1 STYLE="text-align: center">TỪ ĐIỂN</h1>
+    <label>Nhập từ khoá cần tìm kiếm</label>
+    <input type="text" id="tukhoa">
+
+    <button type="button" onclick="search()">Search</button><br>
+    <label id="view"></label>
+</form>
+</center>
+<script>
+    function search() {
+    let eng= ['book','phone','TV','computer','black']
+    let vie= ['sách','điện thoại','television','máy tính','màu đen']
+    let tuvung= document.getElementById('tukhoa').value;
+    let count = 0;
+    for (let i =0;i<eng.length;i++){
+        if (tuvung==eng[i]){
+            count++;
+            document.getElementById('view').innerText=vie[i];
+        }
+    }
+    if (count == 0){
+        document.getElementById('view').innerText='không tìm thấy từ '+tuvung+' trong từ điển';
+    }
+    }
+</script>
+</body>
+</html>
