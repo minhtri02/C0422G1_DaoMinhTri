@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    let number = prompt('Nhập phần tử vào mảng')
+    let myArray = number.toString();
+    document.write('Mảng trước khi đảo ngược: '+myArray+'<br>')
+    let arr2 = []
+    let j =0;
+    for (let i = myArray.length-1;i>=0;i--){
+        arr2[j]=myArray[i]
+        j++;
+    }
+    document.write('Mảng sau khi đảo ngược: '+arr2)
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng hai chiều</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    for (let i=0;i<4;i++) {
+        arr[i]=[]
+        for (let j =0;j<4;j++){
+            arr[i][j] = prompt('nhập phẩn tử thứ ' + (j + 1) + ' vào mảng '+(i+1));
+            console.log(arr[i][j])
+            document.write(arr[i][j])
+        }
+        document.write('<br>')
+    }
+
+</script>
+</body>
+</html>

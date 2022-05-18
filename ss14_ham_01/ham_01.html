@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
+</head>
+<body>
+<script>
+    function cauhoi(answer) {
+        let result =''
+        if (answer){
+            result = 'excellent!'
+        }else{
+            result = 'good!'
+        }
+        return result;
+    }
+    let a = confirm('Bạn có chơi game ko?')
+    let b = cauhoi(a);
+    alert(b);
+</script>
+</body>
+</html>

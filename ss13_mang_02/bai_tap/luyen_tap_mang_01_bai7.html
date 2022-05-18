@@ -12,21 +12,22 @@
     }
     let number = prompt('Enter your number: ')
     let count = 0;
+
     for (let i =0;i<arr.length;i++){
         if (number==arr[i]){
             count++;
-            alert(number+' is in the array')
-            for (i;i<arr.length;i++){
-                arr[i]=arr[i+1];
+            for (let j = i;j<arr.length;j++){
+                arr[j]=arr[j+1];
+                console.log(arr[j])
             }
-            arr[arr.length-1]='';
-            // arr.splice(i,1);
-            alert(arr)
+            arr[arr.length-1]=0;
+            i--;
         }
     }
     if (count == 0){
         alert(number+' is not in the array')
     }
+    alert(arr)
 </script>
 </body>
 </html>

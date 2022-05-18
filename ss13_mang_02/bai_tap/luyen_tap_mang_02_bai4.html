@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong chuỗi</title>
+</head>
+<body>
+
+<script>
+    let number = prompt('Nhập phần tử vào mảng')
+    let arr = number.toString();
+    count=0
+    for (let i = 0;i<arr.length;i++){
+        if (isNaN(arr[i])){
+            count++
+        }
+    }
+    document.write('có tất cả '+count+' phần tử là từ')
+</script> nb
+</body>
+</html>
