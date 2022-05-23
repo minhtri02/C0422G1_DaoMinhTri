@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</title>
+</head>
+<body>
+<script>
+    let a =parseInt(prompt('Nhập bán kính hình tròn: '))
+    alert('Diện tích hình tròn với bán kính '+a+' là: '+dienTich(a)) ;
+    alert('Chu vi hình tròn với bán kính '+a+' là: '+chuVi(a)) ;
+    function dienTich(r) {
+        let s = Math.PI*r*r
+        return s;
+    }
+    function chuVi(r) {
+        let cv=Math.PI*r*2
+        return cv;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 1 chuỗi bất kì và 1 kí tự. Đếm số lần xuất
+        hiện của kí tự đó trong chuỗi.</title>
+</head>
+<body>
+<script>
+
+    let arr=[]
+    let c=0
+    arr=prompt('Nhập chuỗi bất kì: ')
+    a = prompt('Nhập ký tự X: ')
+    console.log(arr.length);
+    for (let i=0;i<arr.length;i++){
+        if (a==arr[i]){
+            c++;
+        }
+    }
+    document.write(c);
+</script>
+</body>
+</html>

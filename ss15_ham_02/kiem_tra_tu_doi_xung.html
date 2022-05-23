@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập một từ đối xứng: ')
+    let array = a.split('')
+    count = 0
+    let j =0
+    for (let i =0 ; i<parseInt(array.length/2) ;i++){
+        j =array.length-(i+1);
+            if (array[i]==array[j]){
+                count++
+            }else {
+                alert('Từ '+a+' không đối xứng')
+                    break;
+            }
+        if (count==parseInt(array.length/2) ){
+            alert('Từ '+a+' đối xứng!')
+            break;
+        }
+    }
+
+</script>
+</body>
+</html>

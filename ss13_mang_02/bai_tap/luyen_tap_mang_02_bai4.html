@@ -8,14 +8,14 @@
 
 <script>
     let number = prompt('Nhập phần tử vào mảng')
-    let arr = number.toString();
-    count=0
+    let arr = number.trim();
+    count=1
     for (let i = 0;i<arr.length;i++){
-        if (isNaN(arr[i])){
+        if (arr[i]==' '&&arr[i+1]!= ' '){
             count++
         }
     }
-    document.write('có tất cả '+count+' phần tử là từ')
-</script> nb
+    document.write('có tất cả '+count+' từ')
+</script>
 </body>
 </html>

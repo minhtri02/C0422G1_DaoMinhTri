@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibonacci(n) {
+        let a=0
+        let count=0;
+        let a1= 0;
+        let a2=1;
+        let x=1
+        let arr=[2]
+        while (a2 < n)
+        {
+            a = a1 + a2;
+
+            console.log(a2)
+            for (let j=2;j<a2;j++){
+                if (a2%j==0){
+                    count++
+                    break;
+                }
+            }
+            if (count==0){
+                arr[x]=a2;
+                x++;
+            }
+            count=0
+            a1 = a2;
+            a2 = a;
+        }
+        return arr;
+    }
+    let n =parseInt(prompt('nhập vào thứ tự dãy số fibonacci: ')) ;
+    let arr= fibonacci(n);
+    document.write(arr)
+   </script>
+</body>
+</html>

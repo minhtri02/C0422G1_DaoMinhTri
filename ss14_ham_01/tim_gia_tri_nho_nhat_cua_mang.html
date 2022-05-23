@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    for (let i=0;i<10;i++){
+        arr[i]=parseInt(prompt('Nhập phần tử thứ '+(i+1)+' vào mảng'))
+    }
+    document.write('Phần tử nhỏ nhất trong mảng là: '+mang(arr))
+    function mang(arr) {
+        let max=arr[0];
+        for (let i=1;i<arr.length;i++){
+            if (arr[i]<max){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+</script>
+</body>
+</html>

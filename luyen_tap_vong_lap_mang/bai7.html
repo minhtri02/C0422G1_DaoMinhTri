@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình cho người dùng nhập vào :
+        1 mảng số nguyên ( độ dài của mảng do người
+        dùng lựa chọn ) và 1 số nguyên number bất kì.
+        Nếu number là số lẻ, thì tất cả số chẵn trong
+        mảng sẽ tăng lên 1 đơn vị.Ngược lại nếu
+        number là số chẵn thì tất cả số lẻ trong mảng
+        tăng lên 1 đơn vị.
+        Yêu cầu hiển thị ra màn hình: Mảng số nguyên
+        trước khi thay đổi, số người dùng nhập vào và
+        mảng sau khi thay đổi.</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    let a=prompt('Nhập số mảng bất kì: ')
+    for (i=0;i<a;i++){
+        arr[i]=parseInt(prompt('nhập giá trị tại '+ (i+1)+' của mảng'))
+    }
+    document.write('Mảng trước khi thay đổi : '+arr+'<br>')
+    let x= prompt('Nhập giá trị x: ')
+    document.write('Số nguyên người dùng nhập vào : '+x+'<br>')
+    if (x%2==0){
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]%2!=0){
+                arr[i]+=1;
+            }
+        }
+    }else {
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]%2==0){
+                arr[i]+=1;
+            }
+        }
+    }
+    document.write('Mảng sau khi thay đổi: '+arr)
+</script>
+</body>
+</html>

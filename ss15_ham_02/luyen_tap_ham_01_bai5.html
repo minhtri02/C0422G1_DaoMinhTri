@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tenSao=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus']
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo']
+    let name = prompt('Nhập tên của ngôi sao')
+    let count = 0
+    function serch(name) {
+        for (let i =0;i<tenSao.length;i++){
+            if (name == tenSao[i]){
+                alert(chomSao[i])
+                count++
+            }
+        }
+        if (count==0){
+            alert('không tìm thấy chòm sao tương ứng với '+name)
+        }
+    }
+    serch(name);
+</script>
+</body>
+</html>

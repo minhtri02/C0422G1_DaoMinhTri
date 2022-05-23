@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập nào số nguyên thứ 1: '))
+    let b =parseInt(prompt('Nhập nào số nguyên thứ 2: '))
+    let c = parseInt(prompt('Nhập nào số nguyên thứ 3: '))
+    alert('Giá trị nhỏ nhất trong 3 số là: '+ min(a,b,c))
+
+    function min(a,b,c) {
+        let min = a;
+        if (b<min){
+            min=b;
+        }else if (c<min){
+            min=c;
+        }
+        return min;
+    }
+</script>
+</body>
+</html>

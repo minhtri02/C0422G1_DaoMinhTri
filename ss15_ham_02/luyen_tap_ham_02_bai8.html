@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+<script>
+    function daomang(arr) {
+        let arr2= []
+        let i=0;
+        for (let j = arr.length-1 ; j>=0;j--){
+            arr2[i]=arr[j];
+            i++
+        }
+        return arr2.join('');
+    }
+    let a = prompt('nhập vào mảng số nguyên bất kỳ')
+    let arr=[]
+    arr = a.split('');
+    alert(daomang(arr))
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<form>
+    <table id="table" >
+        <tr>
+            <td>kẹo</td>
+        </tr>
+        <tr>
+            <td>bánh</td>
+        </tr>
+        <tr>
+            <td>phone</td>
+        </tr>
+    </table>
+    <input placeholder="Thêm sản phẩm" id="them"><button onclick="them()">Thêm</button><br>
+    <input placeholder="Nhập tên cần sửa" id="tencansua"><br>
+    <input placeholder="Nhập tên sửa" id="tensua"><button onclick="sua()">sửa</button><br>
+    <input placeholder="Nhập tên cần xoá"><button onclick="xoa()">xoá</button><br>
+</form>
+<script>
+    function chuyenMang(){
+        let view = document.getElementById('table').value;
+        console.log(view)
+        // let arrayView = []
+        // arrayView = view.split('&nbsp&nbsp')
+        // console.log(arrayView);
+    }
+
+function them() {
+    chuyenMang();
+    let them = document.getElementById('them').value;
+    document.getElementById('select').innerHTML=them;
+}
+</script>
+</body>
+</html>
