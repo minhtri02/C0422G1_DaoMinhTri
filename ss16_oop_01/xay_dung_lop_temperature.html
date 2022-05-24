@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class temperature{
+        constructor(doC) {
+            this.doC = doC;
+        }
+        getdoC(){
+            return this.doC;
+        }
+        setdoC(newDoc){
+            return this.doC =newDoc;
+        }
+        getCsangF(){
+            return (9/5)*this.doC+32;
+        }
+        getCsangK(){
+            return this.doC+273,15;
+        }
+    }
+    let nhiettdo = new temperature(20)
+    nhiettdo.getCsangF()
+    let dok=nhiettdo.getCsangK();
+    console.log(dok)
+    let dof=nhiettdo.getCsangF();
+    console.log(dof)
+    document.write('Độ C: '+nhiettdo.getdoC()+' <br>')
+    document.write('Độ C-F: '+dof+' <br>')
+    document.write('Độ C-k: '+dok+' <br>')
+</script>
+</body>
+</html>

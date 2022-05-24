@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình gọi thức uống đơn giản</title>
+</head>
+<body>
+<script>
+    let hoaDon = 0
+    let a
+    do {
+         a = prompt('menu' +'   '+
+            'cafe(1) ' +
+            'cam vắt(2) ' +
+            'nước ép cà rốt(3) ' +
+            'Nước ép Cà chua(4) ' +
+            'Nước lọc(5) ' +
+            'Nước dừa(6) ' +
+            'Thoát gọi món(7) ')
+        switch (a) {
+            case '1':
+                let slCafe=prompt('cafe' +
+                    ' giá: 20000' +
+                    ' bạn hãy nhập số lượng:')
+                hoaDon+= 20000*slCafe;
+                break
+            case '2':
+                let slCamvat=prompt('cam vắt' +
+                    ' giá: 30000' +
+                    ' bạn hãy nhập số lượng:')
+                hoaDon+= 30000*slCamvat;
+                break
+            case '3':
+                let slCarot=prompt('Nước ép cà rốt' +
+                    ' giá: 35000' +
+                    ' bạn hãy nhập số lượng:')
+                hoaDon+= 35000*slCarot;
+                break
+            case '4':
+                let slCachua=prompt('Nước ép cà chua' +
+                    ' giá: 35000' +
+                    ' bạn hãy nhập số lượng:')
+                hoaDon+= 35000*slCachua;
+                break
+            case '5':
+                let slNuocloc=prompt('Nước lọc' +
+                    ' giá: 35000' +
+                    ' hãy nhập số lượng:')
+                hoaDon+= 5000*slNuocloc;
+                break
+            case '6':
+                let slNuocdua=prompt('Nước Dừa' +
+                    ' giá: 45000' +
+                    ' bạn hãy nhập số lượng:')
+                hoaDon+= 35000*slNuocdua;
+                break
+        }
+    }while (a!=7);
+    console.log(a)
+    alert('Hoá đơn bạn phải trả là: '+hoaDon)
+</script>
+</body>
+</html>

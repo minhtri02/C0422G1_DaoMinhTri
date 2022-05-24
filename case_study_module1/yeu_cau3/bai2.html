@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =prompt('nhap chuỗi số nguyên vào mảng a')
+    let b =prompt('nhap chuỗi số nguyên vào mảng b')
+    let array = a.split('')
+    let array1= b.split('')
+    document.write(array+'<br>')
+    document.write(array1+'<br>')
+    for (let i = 0; i<array.length;i++){
+        for (let j =0;j<array1.length;j++){
+            if (array[i]==array1[j]){
+                array.splice(i,1)
+                array1.splice(j,1)
+                j=-1;
+            }
+        }
+    }
+    for (let i =0;i<array.length;i++){
+        for (let j =i+1;j<array.length;j++){
+            if (array[i]==array[j]){
+                array.splice(j,1)
+                j--;
+            }
+        }
+    }
+    for (let i =0;i<array1.length;i++){
+        for (let j =i+1;j<array1.length;j++){
+            if (array1[i]==array1[j]){
+                array1.splice(j,1)
+                j--;
+            }
+        }
+    }
+    let arr = array1.concat(array)
+
+    document.write(arr)
+</script>
+</body>
+</html>

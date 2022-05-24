@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array =[]
+    let a=prompt('Nhập vào mảng 1 chuỗi số nguyên')
+    array = a.split('');
+    console.log(array)
+    let sum = []
+    let count=0
+    for (let i = 0 ; i<array.length;i++){
+        for (let j=0;j<=i;j++){
+            count +=parseInt( array[j])
+        }
+        sum[i]=count;
+        count=0
+    }
+    document.write(sum)
+</script>
+</body>
+</html>

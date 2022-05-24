@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hcn</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<script>
+    class Rectangle{
+        constructor(hength , weith,) {
+            this.hength =hength;
+            this.weith = weith;
+        }
+        getWidth(){
+            return this.weith;
+        }
+        gethength(){
+            return this.hength;
+        }
+        setWidth(Width){
+            this.weith =Width;
+        }
+        setHength(height){
+            this.hength = height;
+        }
+        getArea(){
+            return this.weith * this.hength;
+        }
+        getPerimeter(){
+            return (this.weith+this.hength)*2;
+        }
+    }
+    let hcn = new Rectangle(10,5);
+    hcn.setHength(200);
+    hcn.setWidth(100)
+    let width = hcn.getWidth();
+    let heingt = hcn.gethength();
+
+
+    document.write(heingt)
+
+    let canvas = document.getElementById("DemoCanvas");
+    let ctx = canvas.getContext('2d');
+    ctx.fillStyle='#fa4b2a';
+    ctx.fillRect(10, 10, width, heingt)
+</script>
+</body>
+</html>

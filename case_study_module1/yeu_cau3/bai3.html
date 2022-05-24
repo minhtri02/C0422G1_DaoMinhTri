@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =prompt('Nhập vào bảng a ')
+    let b =prompt('Nhập vào bảng b')
+    let arr1=a.split('')
+    let arr2=b.split('')
+    let count =0
+    let max=arr1[0]/arr2[0];
+    for (let i = 1;i<arr1.length;i++){
+        if (arr1[i]/arr2[i]>max){
+            max = arr1[i]/arr2[i];
+            count=i;
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>
