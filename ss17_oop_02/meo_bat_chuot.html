@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng mô phỏng mèo bắt chuột</title>
+</head>
+<body>
+<script>
+    class Rat{
+        constructor(name, weight, speed, status) {
+            this.name=name
+            this.weight=weight
+            this.speed=speed
+        }
+        getName(){
+            this.name
+        }
+        setName(newName){
+            this.name = newName;
+        }
+        getweightRat(){
+            this.weight
+        }
+        setweightRat(newweight){
+            this.weight=newweight
+        }
+        getspeed(){
+            this.speed
+        }
+        setspeed(newspeed){
+            this.speed = newspeed
+        }
+        say(str){
+            document.write(str+'<br>')
+        }
+        getstatus(){
+            this.status = status;
+        }
+        isEmpty(){
+            if(this.status=0){
+                return false;
+            }return true;
+        }
+        getStatus(){
+            if (this.isEmpty()){
+                return document.write('sống');
+            }return document.write('chết');
+
+        }
+    }
+    class Cat{
+        constructor(Name, Weight, maxSpeed,statusCat) {
+            this.Name=Name;
+            this.Weight=Weight;
+            this.maxSpeed=maxSpeed;
+            this.statuscat = statusCat;
+        }
+        giuchuot(){
+            if (this.statuscat==0){
+                return true
+            }return false
+        }
+        getName(){
+            this.Name
+        }
+        setName(newName){
+            this.Name = newName;
+        }
+        getweightRat(){
+            this.Weight
+        }
+        setweightRat(newWeight){
+            this.Weight=newWeight
+        }
+        batchuot(rat){
+            if(this.maxSpeed>rat.speed&&this.giuchuot()){
+                this.statuscat+1
+                document.write('Bắt được 1 con chuột!'+'<br>')
+            }else if (this.giuchuot()){
+                document.write('Đang giữ 1 con chuột ko thể giữ thêm chuột nữa'+'<br>')
+            }else{
+                document.write('Để chuột chạy mất')
+            }
+        }
+        eat(rat){
+            if (rat.isEmpty()){
+                rat.status=0;
+
+                this.Weight+=rat.weight;
+            }else{
+                document.write('chuột chết rồi, không ăn nữa!'+'<br>')
+            }
+        }
+    }
+    let micky = new Rat('micky',5,20,1)
+    let tom = new Cat('tom',15,40,0)
+    document.write(tom.batchuot(micky))
+    document.write(tom.eat(micky))
+    console.log(tom.giuchuot())
+    console.log(micky.isEmpty())
+</script>
+</body>
+</html>

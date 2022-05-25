@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cho một mảng số nguyên Hãy kiểm tra xem tần số xuất hiện của tất cả các số nguyên trong mảng có bằng nhau hay không</title>
+</head>
+<body>
+<script>
+    let arr=[1, 2, 2, 1]
+    // arr.sort('')
+    let count =1
+    let arr2 =[]
+    for (let i=0;i<arr.length;i++){
+        for (let j=i+1;j<arr.length;j++){
+            if (arr[i]==arr[j]){
+                arr.splice(j,1)
+                count++
+                j--
+            }
+        }
+        arr2.push(count)
+        count=1
+    }
+    let a=true
+
+    for (let i=1;i<arr2.length;i++){
+        if(arr2[0]!=arr2[i]){
+            a=false
+            break;
+        }else {
+            a= true;
+        }
+    }
+    document.write(a)
+    console.log(arr)
+    console.log(arr2)
+</script>
+</body>
+</html>

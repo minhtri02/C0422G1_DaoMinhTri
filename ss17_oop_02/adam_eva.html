@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu chuyện Adam và eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(Weight) {
+            this.Weight = Weight
+        }
+        getWeight(){
+            this.Weight;
+        }
+        isEmpty() {
+            if(this.Weight <= 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        checkApple(){
+            if (this.isEmpty()){
+                return true;
+            }else {
+                return false
+            }
+        }
+    }
+    class Human{
+        constructor(name, gender, nang) {
+            this.name=name
+            this.gender=gender
+            this.nang=nang
+        }
+
+        getName(){
+            this.name
+        }
+        setName(newName){
+            this.name =newName
+        }
+
+        isMale(){
+            if(this.gender == 1){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        getGender(){
+            if(this.isMale()){
+                return "Male";
+            }else {
+                return "Female";
+            }
+        }
+        getnang(){
+            this.nang
+        }
+        setnang(newnang){
+            this.nang = newnang;
+        }
+        say(str){
+            document.write(str+'<br>')
+        }
+        eat(apple){
+            if (apple.checkApple){
+                apple.Weight-=1
+                this.nang+=1
+                document.write(this.name+' ăn táo'+'<br>')
+                document.write('quả táo còn: '+(apple.Weight)+'<br>')
+                document.write('cân nặng của '+this.name+' là: '+(this.nang)+'<br>')
+            }else {
+                document.write('Hết táo rồi'+'<br>')
+            }
+        }
+    }
+    let apple = new Apple(10)
+    let thanh = new Human('thanh', 1, 50)
+    let eva = new Human('eva',2,49)
+    while (apple.checkApple()!=true){
+        thanh.eat(apple,thanh)
+        eva.eat(apple,eva)
+    }
+    thanh.say('i am thanh')
+    document.write(thanh.getGender()+'<br>')
+    document.write(eva.getGender())
+</script>
+</body>
+</html>
