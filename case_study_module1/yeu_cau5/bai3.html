@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất, nhỏ nhất trong mảng 2D</title>
+</head>
+<body>
+<script>
+    let Cdai=parseInt( prompt('Nhập chiều dài của mảng 2D'))
+    let Crong=parseInt(prompt('Nhập chiều rộng của mảng 2D'))
+    let array = new Array(Cdai)
+    for (let i=0;i<array.length;i++){
+        array[i] = new Array()
+        for (let j=0;j<Crong;j++){
+            array[i][j]=parseInt(prompt('Nhập dữ liệu cột: '+i+' dòng '+j))
+        }
+    }
+    let max=array[0][0]
+    let min=array[0][0]
+    for (let i=0;i<array.length;i++){
+        for (let j=0;j<Crong;j++){
+            if (array[i][j]>max){
+                max=array[i][j];
+            }
+            if (array[i][j]<min){
+                min=array[i][j];
+            }
+        }
+    }
+    document.write('Số lớn nhất trong mảng 2D là : '+max+'<br>')
+    document.write('Số nhỏ nhất trong mảng 2D là : '+min)
+</script>
+</body>
+</html>

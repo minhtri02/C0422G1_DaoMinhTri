@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số lượng kí tự khác nhau trong xâu</title>
+</head>
+<body>
+<script>
+    let a = prompt('hãy nhập 1 xâu ký tự: ')
+    let arr=[]
+    arr = a.split('')
+    console.log(arr)
+    for (let i=0;i<arr.length;i++){
+        for (let j=i+1;j<arr.length;j++){
+            if (arr[i]==arr[j]){
+                arr.splice(j,1)
+                j--
+            }
+        }
+    }
+    document.write('có '+arr.length+' kí tự khác nhau là: '+arr)
+    console.log(arr)
+</script>
+</body>
+</html>

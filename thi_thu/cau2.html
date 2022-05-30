@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuyenChuoi(str) {
+        str.trim();
+        let a=str.charAt(0)
+        if (str.indexOf(' ')===-1) {
+            return 'chuỗi này chỉ được tính chỉ có 1 từ';
+        }
+        for (let i =1 ;i<str.length;i++){
+            if (str[i]===' '&& str[i+1]!==' '){
+                a += str[i+1];
+            }
+        }
+        console.log(typeof(a));
+        let b;
+        b=a.toUpperCase();
+        return b;
+    }
+    let a = prompt('Nhập vào 1 chuổi cần viết tắt :')
+    document.write(chuyenChuoi(a))
+</script>
+</body>
+</html>

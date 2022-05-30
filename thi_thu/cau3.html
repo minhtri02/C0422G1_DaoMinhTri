@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=prompt('Nhập n chiều dài của mảng: ')
+    let arr = []
+    for (let i= 0;i<a;i++){
+        arr[i]= +prompt('Nhập phần tử thứ '+i+' vào mảng')
+    }
+    function araya(arr){
+        arr.sort()
+        // document.write(arr.sort())
+        let max=(arr[arr.length-1])
+        // ngu
+        // for (let i=1;i<arr.length;i++){
+        //     if (arr[i]>max){
+        //         max=arr[i];
+        //     }
+        // }
+
+        document.write(arr+'<br>')
+        let arr2=[0]
+        let a1=0
+        let a2=1
+        let sum=0
+        //arr2 là hàm chứa fibolasi từ 1 - max
+        while (a2<=max){
+            sum=a1+a2;
+            arr2.push(a2)
+            a1 =a2
+            a2=sum
+
+        }
+        document.write(arr2+'<br>')
+        //arr3 là mảng chứa các ký tự có trong arr và arr2
+        let arr3=[]
+        // let j=0
+        for (let i=0;i<arr.length;i++){
+            if (arr2.includes(arr[i])){
+                arr3.push(arr[i]);
+                // j++;
+            }
+        }
+        document.write(arr3)
+    }
+    araya(arr);
+    console.log(arr3)
+</script>
+</body>
+</html>

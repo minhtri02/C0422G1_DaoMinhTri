@@ -7,10 +7,11 @@
 <body>
 <script>
     class Rat{
-        constructor(name, weight, speed, status) {
+        constructor(name, weight, speed, Status) {
             this.name=name
             this.weight=weight
             this.speed=speed
+            this.Status = Status
         }
         getName(){
             this.name
@@ -34,26 +35,27 @@
             document.write(str+'<br>')
         }
         getstatus(){
-            this.status = status;
+            this.status = Status;
         }
         isEmpty(){
-            if(this.status=0){
-                return false;
-            }return true;
+            if(this.Status==1){
+                return true;
+            }return false;
         }
         getStatus(){
             if (this.isEmpty()){
-                return document.write('sống');
-            }return document.write('chết');
+                return document.write(this.name +' sống'+'<br>');
+            }return document.write(this.name+' chết'+'<br>');
 
         }
     }
     class Cat{
-        constructor(Name, Weight, maxSpeed,statusCat) {
+        constructor(Name, Weight, maxSpeed,statusCat, ratName) {
             this.Name=Name;
             this.Weight=Weight;
             this.maxSpeed=maxSpeed;
             this.statuscat = statusCat;
+            this.ratName = ratName;
         }
         giuchuot(){
             if (this.statuscat==0){
@@ -74,30 +76,56 @@
         }
         batchuot(rat){
             if(this.maxSpeed>rat.speed&&this.giuchuot()){
-                this.statuscat+1
+                this.statuscat+=1
+                this.ratName = rat.name;
                 document.write('Bắt được 1 con chuột!'+'<br>')
-            }else if (this.giuchuot()){
+                // return rat.name;
+            }else if (this.giuchuot()==false){
                 document.write('Đang giữ 1 con chuột ko thể giữ thêm chuột nữa'+'<br>')
             }else{
-                document.write('Để chuột chạy mất')
+                document.write('Để chuột chạy mất vì chạy không lại chuột'+'<br>')
             }
         }
         eat(rat){
-            if (rat.isEmpty()){
-                rat.status=0;
+            // document.write(this.ratName + " " + rat.name)
 
+            if (rat.isEmpty() && this.ratName === rat.name){
+                rat.Status=0;
                 this.Weight+=rat.weight;
-            }else{
-                document.write('chuột chết rồi, không ăn nữa!'+'<br>')
+                return document.write('ăn được 1 con chuột tăng lên đc '+this.Weight +'<br>')
+            }else if (this.ratName != rat.name){
+                document.write('Có đang giữ '+rat.name+' đâu mà ăn!'+'<br>')
+            }else
+            {
+                return document.write('chuột chết rồi, không ăn nữa!'+'<br>')
             }
         }
     }
-    let micky = new Rat('micky',5,20,1)
-    let tom = new Cat('tom',15,40,0)
-    document.write(tom.batchuot(micky))
-    document.write(tom.eat(micky))
-    console.log(tom.giuchuot())
-    console.log(micky.isEmpty())
+    let micky = new Rat('micky',5,35,1)
+    let jerry = new Rat('jerry',3,30,1)
+    let tom = new Cat('tom',15,40,0,'')
+    micky.getStatus()
+    tom.batchuot(micky)
+    document.write(tom.giuchuot() +"<br>")
+    tom.batchuot(jerry)
+    document.write(tom.giuchuot() +"<br>")
+
+    tom.batchuot(jerry)
+    document.write(tom.giuchuot() +"<br>")
+
+    tom.batchuot(jerry)
+    document.write(tom.giuchuot() +"<br>")
+
+    tom.eat(jerry)
+
+    tom.eat(micky)
+    jerry.getStatus();
+    micky.getStatus();
+
+
+    // console.log(tom.giuchuot())
+    // console.log(micky.isEmpty())
+    // console.log(tom.eat(micky)
 </script>
 </body>
 </html>

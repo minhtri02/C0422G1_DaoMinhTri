@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liệt kê các số nguyên tố và đếm các số nguyên tố có trong mảng</title>
+</head>
+<body>
+<script>
+    let Cdai=parseInt( prompt('Nhập chiều dài của mảng'))
+    let Crong=parseInt(prompt('Nhập chiều rộng của mảng'))
+    let array = new Array(Cdai)
+
+    for (let i=0;i<array.length;i++){
+        array[i] = new Array()
+        for (let j=0;j<Crong;j++){
+            array[i][j]=parseInt(prompt('Nhập dữ liệu cột: '+i+' dòng '+j))
+        }
+    }
+    let count =0
+    let arr2 =[]
+    for (let i=0;i<array.length;i++){
+        for (let j=0;j<Crong;j++){
+            if (array[i][j]==0){
+                continue;
+            }
+            for (let k =2;k<array[i][j];k++){
+                if (array[i][j]%k==0){
+                    count++
+                    break;
+                }
+            }
+            if (count==0){
+                arr2.push(array[i][j])
+            }
+            count=0
+        }
+    }
+    console.log(array)
+    console.log(arr2)
+    document.write('Có tất cả '+arr2.length+' số nguyên tố trong mảng 2D gồm: '+arr2)
+</script>
+</body>
+</html>
